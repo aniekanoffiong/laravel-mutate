@@ -55,7 +55,7 @@ trait HasMutators
                 ->get($this->getMutator($attribute))
                 ->unserializeAttribute($value);
 
-            $this->mutatedCache[$attribute] = $mutated;
+            $this->mutatedCache[$attribute.$mutated] = $mutated;
 
             return $mutated;
         }
